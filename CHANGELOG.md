@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `CLI (Termynal)` documentation page demonstrating the new mode.
 - Documentation for serving termynal blocks under Zensical: register `termynal.css` / `termynal.js` via `extra_css` / `extra_javascript` (CDN one-liner or self-hosted), since Zensical does not run the `termynal` MkDocs plugin.
 
+### Fixed
+
+- Termynal mode now keeps its colors when `NO_COLOR` is set in the build environment (e.g. ReadTheDocs). The capture `Console` passes `no_color=False`, so the help is no longer silently rendered monochrome — the output is a build artifact converted to HTML, not interactive terminal output ([#38](https://github.com/syn54x/mkdocs-typer2/issues/38)).
+
 ## [0.3.1] - 2026-05-27
 
 ### Fixed
